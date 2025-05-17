@@ -2,7 +2,7 @@ PROGRAM CompMonth(INPUT, OUTPUT);
 
 USES
   DateIO;
-VAr
+VAR
   Mo1, Mo2: Month;
 BEGIN
   ReadMonth(INPUT, Mo1);
