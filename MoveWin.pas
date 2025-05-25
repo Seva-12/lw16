@@ -14,7 +14,7 @@ BEGIN{ReadMonth}
   W2 := ' ';
   W3 := ' ';
   W4 := ' ';
-  WHILE NOT EOF(INPUT)
+  WHILE NOT EOLN(INPUT)
   DO
     BEGIN      
       W1 := W2;
@@ -22,23 +22,15 @@ BEGIN{ReadMonth}
       W3 := W4;
       READ(INPUT, W4);         
       IF (W1 = 'l') AND (W2 = 'a') AND (W3 = 'n') AND (W4 = 'd') 
-      THEN
-        BEGIN 
-          Land := TRUE;
-          Looking := TRUE
-        END 
+      THEN        
+        Land := TRUE        
       ELSE
         IF (W2 = 's') AND (W3 = 'e') AND (W4 = 'a') 
         THEN 
-          BEGIN 
-             Sea := TRUE;
-             Looking := TRUE
-          END
+          Sea := TRUE
         
     END;
-  IF EOF(INPUT) 
-  THEN
-    Looking := FALSE
+  
 END;
 
 BEGIN
